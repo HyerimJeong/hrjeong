@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<script type="text/javascript">
+<!-- 
+
+	//자바스크립트
+	
+	
+	//표현식,익명함수, 잘안쓰이는데 권장
+	var a = function(){
+		alert("test a()");
+	};
+	
+	a();
+	//선언식함수, 함수호이스팅발생
+	function add(){
+		alert();
+	}
+	add();
+	
+	//함수호이스팅 : 
+	
+	
+	window.onload=function(){
+		alert("1");
+		var xhr = new XMLHttpRequest();
+		
+		alert("객체생성완료");
+		xhr.open("GET","/Example/ajax.html",true);
+		alert(xhr.readyState);
+		xhr.send(null);
+		alert(xhr.readyState); 
+		// 0 ready 
+		// 1 open() 
+		// 2 send()
+		// 3 data 
+		// 4 sucess 
+		if(xhr.readyState=4){
+			alert("test?");
+			if(xhr.status=200){
+				alert("test2222");
+				xhr.getAllResponseHeaders();
+				//alert(xhr.getAllResponseHeaders());
+				
+				//alert(xhr.responseText);
+			}
+		}
+	}
+//-->
+</script>
+<body>
+me-rong
+</body>
+</html>

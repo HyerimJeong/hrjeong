@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<title>Insert title here</title>
+<style type="text/css">
+.high-light {
+	background: lime;
+}
+
+.high-light-0 {
+	background: blue;
+}
+
+.high-light-1 {
+	background: gray;
+}
+
+.high-light-2 {
+	background: green;
+}
+
+.high-light-3 {
+	background: orange;
+}
+
+.high-light-4 {
+	background: olive;
+}
+</style>
+<script type="text/javascript">
+
+	$(document).ready(function() {
+		$('h6').addClass('high-light');
+		  $('h6').each(function(index, item) {
+			//$(item).addClass('high-light-'+index);
+			$(this).addClass('high-light-' + index);
+		});
+
+		/* $('h6').addClass(function(index) {
+			return 'high-light-' + index;
+		}); */
+	});
+</script>
+
+</head>
+<body>
+	<h6>item - 0</h6>
+	<h6>item - 1</h6>
+	<h6>item - 2</h6>
+	<h6>item - 3</h6>
+	<h6>item - 4</h6>
+
+</body>
+</html>

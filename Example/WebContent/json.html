@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="js/jquery-1.10.2-vsdoc.js"></script>
+
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script type="text/javascript">
+ 	$(document).ready(function(){
+		alert('ready start');
+		var array = [
+		    	{name : 'Hanbit', link: 'http://hanb.co.kr'},
+		    	{name : 'Naver', link: 'http://naver.com'},
+		    	{name : 'Daum', link: 'http://daum.net'}
+		    ];
+		
+		$.each(array, function(index, item){
+			alert('each start');
+			var output = '';
+			
+			output += '<a href="'+item.link+'">';
+			output += ' <h1>'+item.name+'</h1>';
+			output += '</a>';
+			
+			alert('output add');
+			document.body.innerHTML += output;
+		});
+	});
+
+</script>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>body content
+</body>
+</html>
